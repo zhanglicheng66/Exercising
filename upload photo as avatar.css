@@ -1,0 +1,45 @@
+.imagepicker{
+    width: 120px;
+    height:120px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow:inset 0 0 3px rgba(0,0,0,0.5);
+    position: relative;
+}
+.imagepicker:hover{
+    cursor: pointer;
+}
+.imagepicker img{
+    max-width:100%;
+    max-height: 100%;
+    vertical-align: top;
+}
+.imagepicker input[type=file]{
+    position: absolute;
+    background: red;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 1;
+    opacity:0;
+    cursor:pointer;
+}
+.imagepicker .mask{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red ;
+    background: rgba(0,0,0,0.5);
+}
+.imagepicker:hover .mask{
+    display:flex;
+}
