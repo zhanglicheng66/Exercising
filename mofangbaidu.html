@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+
+    <!--<script type="text/javascript" src="mofangbaidu.js"></script>-->
+    <script src="//at.alicdn.com/t/font_859788_fbsplfh1ltd.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        *{ margin:0 ;  padding:0 ;}
+        *{box-sizing:border-box;}
+        ul,ol{ list-style:none ;}
+        *::before, *::after{
+            box-sizing:border-box;
+        }
+       body{
+           min-height: 100vh;
+           border:1px solid red;
+           display:flex;
+           justify-content: center;
+           align-items:center;
+
+       }
+        .bao{
+            /*border: 1px solid green;*/
+            display: flex;
+            position: relative;
+        }
+        .xuanxiang{
+            position: absolute;
+            top:100%;
+            left:0;
+            display: none;
+        }
+        .xuanxiang.active {
+            display: block;
+        }
+        .floatdiv{
+            position:absolute;
+            /*border: 1px solid red;*/
+            margin-left: -30px;
+            right: 0;
+            top:0;
+            height: 100%;
+            /*border:1px solid red;*/
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            margin-right: 10px;
+            color:#b8b8b8;
+        }
+        .inputbao{
+            position: relative;
+            display: inline-block;
+        }
+        .inputbao{float:left;}
+        .inputbao + button{float:left;}
+
+        .inputbao input[type=text]{
+            border:1px solid #b8b8b8;
+            width: 540px;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 8px;
+            font-size: 15px;
+        }
+        .inputbao input[type=text]:focus{
+            outline: none;
+            border-color: #4b94fc;
+        }
+        .fengexian{
+            width: 0;
+            height: 16px;
+            border-left: 1px solid ;
+            margin:0 12px;
+
+        }
+        .inputbao svg.icon{
+            width:18px;
+            height: 2opx;
+            fill:#b8b8b8;
+        }
+        .inputbao svg.icon:hover{
+            fill:#4b94fc;
+            cursor:pointer;
+        }
+        .inputbao + button{
+            background: #3988F8;
+            border:none;
+            font-size: 16px;
+            color:whitesmoke;
+            padding: 0 20px;
+
+        }
+        .inputbao + button:focus{
+            outline:none;
+        }
+        .inputbao+button:hover{
+            box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.7);
+        }
+
+    </style>
+</head>
+<body>
+<div class="bao">
+    <span class="inputbao">
+        <input id="keyword" type="text" autocomplete="off">
+        <span class="floatdiv">
+          <svg class="icon">
+              <use xlink:href="#icon-mic"></use>
+          </svg>
+          <span class="fengexian"></span>
+          <svg class="icon">
+              <use xlink:href="#icon-camera"></use>
+          </svg>
+        </span>
+    </span>
+    <button>百度一下</button>
+    <ul id="xuanxiang"  class="xuanxiang">
+        <li>选项1</li>
+        <li>选项2</li>
+        <li>选项3</li>
+        <li>选项4</li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="mofangbaidu.js"></script>
+</html>
