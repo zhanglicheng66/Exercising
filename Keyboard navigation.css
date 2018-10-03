@@ -19,7 +19,7 @@ kbd:hover > button {
 }
 body{
     height: 100vh;
-    background: red url("beijing.png" ) no-repeat center center;
+    background: red url(beijing.png ) no-repeat center center;
     background-size: cover;
 }
 

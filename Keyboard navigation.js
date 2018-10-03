@@ -17,7 +17,8 @@ var hash= {
     'z':'zhihu.com'
 }
 //取出localstorage中的zzz对应的hash
-var hashInLocalStorage = xxxxx('zzz')
+var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz')||'')
+
 if(hashInLocalStorage){
     hash = hashInLocalStorage
 }
@@ -64,6 +65,7 @@ while(index < keys['length']){
             var key = button2['id']
             var t = prompt('给我一个网址')
             hash[key] = t
+            localStorage.setItem('zzz', JSON.stringify(hash))
             img2.src = 'http://'+t+'/favicon.ico'
             img2.onerror = function(fff){
                 fff.target.src = 'https://i.loli.net/2018/10/03/5bb4606129100.png'
