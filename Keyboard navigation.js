@@ -17,7 +17,7 @@ var hash= {
     'z':'zhihu.com'
 }
 //取出localstorage中的zzz对应的hash
-var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz')||'')
+var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz')||'null')
 
 if(hashInLocalStorage){
     hash = hashInLocalStorage
